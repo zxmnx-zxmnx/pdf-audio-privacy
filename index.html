@@ -61,14 +61,15 @@ com.geozeta.pdfaudio
 
 <p>
 <strong>Última actualización:</strong>
-2 de septiembre de 2026
+24 de septiembre de 2026
 </p>
 
 <div class="info">
 Geo Zeta: PDF a Voz y Audio está diseñada para funcionar principalmente
 de forma local en el dispositivo del usuario. La aplicación permite abrir
-documentos PDF, leer su contenido mediante texto a voz, generar archivos
-relacionados con esas funciones y mostrar publicidad mediante Google AdMob.
+documentos PDF, leer su contenido mediante texto a voz, reconocer texto
+de PDF escaneados con OCR local, generar archivos y mostrar publicidad
+mediante Google AdMob, incluidos anuncios recompensados voluntarios.
 </div>
 
 <h2>1. Información personal</h2>
@@ -112,7 +113,16 @@ asignado a la aplicación.
 Los documentos PDF no son enviados a servidores propios del desarrollador.
 </p>
 
-<h2>3. Texto a voz</h2>
+<h2>3. Reconocimiento óptico de caracteres (OCR)</h2>
+
+<p>
+El modo OCR para PDF escaneados utiliza modelos de reconocimiento incluidos
+en la aplicación y procesa las páginas en el propio dispositivo. El documento,
+las imágenes de sus páginas y el texto reconocido no se envían a servidores
+propios del desarrollador para realizar el OCR.
+</p>
+
+<h2>4. Texto a voz</h2>
 
 <p>
 Geo Zeta utiliza las funciones de texto a voz (Text-to-Speech o TTS)
@@ -132,7 +142,7 @@ Estos servicios externos pueden estar sujetos a sus propias políticas
 de privacidad.
 </p>
 
-<h2>4. Archivos generados</h2>
+<h2>5. Archivos generados</h2>
 
 <p>
 La aplicación puede crear archivos derivados de las funciones utilizadas
@@ -141,11 +151,12 @@ PDF generados a partir del documento abierto.
 </p>
 
 <p>
-Estos archivos se almacenan localmente en el dispositivo y no son enviados
-automáticamente al desarrollador.
+Estos archivos se almacenan localmente en el dispositivo, en la carpeta
+de la aplicación y, cuando corresponde, en las carpetas públicas de Música,
+Imágenes y Documentos. No se envían automáticamente al desarrollador.
 </p>
 
-<h2>5. Compartir archivos</h2>
+<h2>6. Compartir archivos</h2>
 
 <p>
 Si el usuario utiliza una función de compartir, Android mostrará las
@@ -157,7 +168,7 @@ El archivo solamente será entregado a la aplicación o servicio que el
 propio usuario seleccione.
 </p>
 
-<h2>6. Preferencias de la aplicación</h2>
+<h2>7. Preferencias de la aplicación</h2>
 
 <p>
 Geo Zeta puede guardar localmente determinadas preferencias necesarias
@@ -170,7 +181,7 @@ Estas preferencias se utilizan para el funcionamiento de la aplicación
 y no son enviadas a servidores propios del desarrollador.
 </p>
 
-<h2>7. Permisos y funciones de Android</h2>
+<h2>8. Permisos y funciones de Android</h2>
 
 <p>
 Geo Zeta utiliza funciones y permisos de Android necesarios para proporcionar
@@ -193,8 +204,13 @@ sus características.
 
   <li>
     <strong>Servicio en primer plano para reproducción multimedia:</strong>
-    permite mantener la lectura o reproducción cuando la aplicación
-    no está visible en pantalla.
+    permite mantener la lectura y sus controles con la pantalla apagada
+    o cuando la aplicación no está visible.
+  </li>
+  <li>
+    <strong>Servicio en primer plano para generación de audio:</strong>
+    permite continuar la creación de archivos de audio en segundo plano
+    y mostrar su progreso mediante una notificación.
   </li>
 
   <li>
@@ -205,15 +221,22 @@ sus características.
 </ul>
 
 <p>
-La versión actual no utiliza permisos de ubicación, cámara, micrófono
-ni contactos.
+La versión actual no solicita permisos de ubicación, cámara, micrófono
+ni contactos. La opción de lectura con pantalla apagada, cuando está
+presente, puede abrir los ajustes de batería de Android; la aplicación
+no cambia por sí sola esos ajustes.
 </p>
 
-<h2>8. Publicidad</h2>
+<h2>9. Publicidad</h2>
 
 <p>
 Geo Zeta: PDF a Voz y Audio utiliza Google AdMob, un servicio de publicidad
-proporcionado por Google, para mostrar anuncios dentro de la aplicación.
+proporcionado por Google, para mostrar un banner y ofrecer anuncios
+recompensados. Los anuncios recompensados se muestran cuando el usuario
+elige voluntariamente ver uno para desbloquear temporalmente OCR y
+funciones de guardado. El desbloqueo dura 8 horas, no es una suscripción
+ni implica una compra. Las demás funciones siguen disponibles sin ver
+un anuncio recompensado.
 </p>
 
 <p>
@@ -253,7 +276,7 @@ la edad del usuario, sus preferencias de consentimiento y los requisitos
 legales aplicables.
 </p>
 
-<h2>9. Compras dentro de la aplicación</h2>
+<h2>10. Compras dentro de la aplicación</h2>
 
 <p>
 La versión actual no incluye compras dentro de la aplicación ni suscripciones.
@@ -264,7 +287,7 @@ Si estas funciones se incorporan en el futuro, esta política será actualizada
 para informar adecuadamente sobre ellas.
 </p>
 
-<h2>10. Venta y compartición de información</h2>
+<h2>11. Venta y compartición de información</h2>
 
 <p>
 El desarrollador no vende información personal de los usuarios.
@@ -282,7 +305,7 @@ datos necesarios para proporcionar sus servicios conforme a sus propias
 políticas de privacidad.
 </p>
 
-<h2>11. Conservación y eliminación</h2>
+<h2>12. Conservación y eliminación</h2>
 
 <p>
 Geo Zeta no mantiene cuentas de usuario ni una base de datos remota propia
@@ -301,7 +324,10 @@ en su dispositivo o en la propia aplicación cuando corresponda.
 
 <p>
 También puede eliminar los datos locales de Geo Zeta desde los ajustes
-de Android o desinstalando la aplicación.
+de Android o desinstalando la aplicación. Las copias guardadas en carpetas
+públicas del teléfono (Música, Imágenes y Documentos) pueden permanecer
+después de desinstalar; el usuario puede borrarlas desde la galería,
+el reproductor o el gestor de archivos.
 </p>
 
 <p>
@@ -310,7 +336,7 @@ están sujetos a las políticas y períodos de conservación establecidos por
 dichos proveedores.
 </p>
 
-<h2>12. Seguridad</h2>
+<h2>13. Seguridad</h2>
 
 <p>
 La aplicación utiliza el almacenamiento privado o específico asignado por
@@ -322,7 +348,7 @@ Geo Zeta no dispone actualmente de servidores propios a los que se transmitan
 automáticamente los documentos PDF del usuario.
 </p>
 
-<h2>13. Privacidad de menores</h2>
+<h2>14. Privacidad de menores</h2>
 
 <p>
 Geo Zeta no requiere que los usuarios creen una cuenta ni proporciona
@@ -341,7 +367,7 @@ Cuando corresponda, se aplicarán las opciones de consentimiento y tratamiento
 de anuncios apropiadas para la edad, ubicación y requisitos legales del usuario.
 </p>
 
-<h2>14. Servicios de terceros</h2>
+<h2>15. Servicios de terceros</h2>
 
 <p>
 Geo Zeta puede utilizar servicios proporcionados por terceros para determinadas
@@ -373,7 +399,7 @@ https://policies.google.com/privacy
 </a>
 </p>
 
-<h2>15. Cambios en esta Política de Privacidad</h2>
+<h2>16. Cambios en esta Política de Privacidad</h2>
 
 <p>
 Esta Política de Privacidad puede actualizarse cuando se incorporen nuevas
@@ -385,7 +411,7 @@ La fecha mostrada al comienzo de esta página indicará la actualización
 más reciente.
 </p>
 
-<h2>16. Contacto</h2>
+<h2>17. Contacto</h2>
 
 <p>
 Si tienes preguntas sobre esta Política de Privacidad, puedes contactar
